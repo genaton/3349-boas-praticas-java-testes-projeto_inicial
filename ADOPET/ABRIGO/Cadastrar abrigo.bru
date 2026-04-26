@@ -1,0 +1,23 @@
+meta {
+  name: Cadastrar abrigo
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/abrigos
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "nome": "Abrigo xpto",
+      "telefone": "61977777777",
+      "email": "abrigoxpto@email.com.br"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Cadastrar tutor
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/tutores
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "nome": "Fulano da Silva",
+      "telefone": "61900000000",
+      "email": "fulano@email.com.br"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

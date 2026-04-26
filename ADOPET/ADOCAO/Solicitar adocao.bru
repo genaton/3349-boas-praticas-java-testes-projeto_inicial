@@ -1,0 +1,23 @@
+meta {
+  name: Solicitar adocao
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/adocoes
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "idPet": 1,
+      "idTutor": 1,
+      "motivo": "Motivo qualquer"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

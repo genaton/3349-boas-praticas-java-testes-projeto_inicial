@@ -1,0 +1,26 @@
+meta {
+  name: Cadastrar pet do abrigo
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8080/abrigos/2/pets
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "tipo": "CACHORRO",
+      "nome": "bidu",
+      "raca": "SRD",
+      "idade": 5,
+      "cor": "preto",
+      "peso": 5.45
+  }
+}
+
+settings {
+  encodeUrl: true
+}

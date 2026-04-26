@@ -1,0 +1,21 @@
+meta {
+  name: Aprovar adocao
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:8080/adocoes/aprovar
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "idAdocao": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,22 @@
+meta {
+  name: Reprovar adocao
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://localhost:8080/adocoes/reprovar
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "idAdocao": 1,
+      "justificativa": "Justificativa qualquer"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
