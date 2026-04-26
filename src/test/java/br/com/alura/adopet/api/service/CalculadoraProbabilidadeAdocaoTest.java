@@ -18,12 +18,15 @@ public class CalculadoraProbabilidadeAdocaoTest {
     void probabilidadeAltaCenario1() {
         // idade 4 anos e 4kg - ALTA
 
+        //PADRAO TRIPLE A
+        // ARRANGE
         Abrigo abrigo = new Abrigo(new CadastroAbrigoDto("Abrigo Feliz", "94999999999", "abrigofeliz@email.com.br"));
         Pet pet = new Pet(new CadastroPetDto(TipoPet.GATO, "Miau", "Siames", 4, "Cinza", 4.0f), abrigo);
 
+        // ACT
         CalculadoraProbabilidadeAdocao calculadora = new CalculadoraProbabilidadeAdocao();
         ProbabilidadeAdocao probabilidade = calculadora.calcular(pet);
-
+        // ASSERT
         Assertions.assertEquals(ProbabilidadeAdocao.ALTA, probabilidade);
 
     }
